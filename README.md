@@ -1,3 +1,22 @@
+# [`jqnpm`](https://github.com/joelpurra/jqnpm) branch [`jq-package-root`](https://github.com/joelpurra/jqnpm/tree/jq-package-root)
+
+A specialized `jqnpm` version, showing possibilities when using a relative `$PACKAGEROOT`-aware `jq` implementation. Contains minimal changes to the base `jqnpm` -- mostly removal of previous workarounds in `src/shared/actions/execute.sh`.
+
+This branch assumes [`jqnpm`'s `package-root` fork of `jq`](https://github.com/joelpurra/jq/tree/package-root) in your `$PATH`, as it has better compatibility with `jqnpm`. The easiest option is to unlink previos versions, then install using `brew` with the `--devel` option.
+
+```bash
+brew tap joelpurra/joelpurra
+brew unlink jqnpm
+brew unlink jq
+brew install jqnpm --devel
+```
+
+
+
+---
+
+
+
 <p align="center">
   <a href="https://github.com/joelpurra/jqnpm"><img src="https://rawgit.com/joelpurra/jqnpm/master/resources/logotype/penrose-triangle.svg" alt="jqnpm logotype, a Penrose triangle" width="100" border="0" /></a>
 </p>
